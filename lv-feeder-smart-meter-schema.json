@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "title": "JSON Schema for LV Feeder Smart Meter Data",
+  "type": "object",
+  "properties": {
+    "dataset_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dno_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "National Grid Electricity Distribution",
+        "Northern Powergrid",
+        "Scottish and Southern Electricity Networks",
+        "UK Power Networks"
+      ]
+    },
+    "dno_alias": {
+      "type": [
+        "string"
+      ],
+      "enum": [
+        "NGED",
+        "NPg",
+        "SSEN",
+        "UKPN_EPN"
+      ]
+    },
+    "secondary_substation_id": {
+      "type": [
+        "string"
+      ]
+    },
+    "secondary_substation_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lv_feeder_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lv_feeder_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "aggregated_device_count_active": {
+      "minimum": 5.0,
+      "type": [
+        "number"
+      ]
+    },
+    "primary_consumption_active_import": {
+      "minimum": 0.0,
+      "type": [
+        "number"
+      ]
+    },
+    "total_consumption_active_import": {
+      "minimum": 0.0,
+      "type": [
+        "number"
+      ]
+    },
+    "data_collection_log_timestamp": {
+      "type": [
+        "string"
+      ],
+      "format": "date-time"
+    },
+    "insert_time": {
+      "type": [
+        "string"
+      ],
+      "format": "date-time"
+    },
+    "last_modified_time": {
+      "type": [
+        "string"
+      ],
+      "format": "date-time"
+    },
+    "substation_latitude": {
+      "minimum": 48.0,
+      "maximum": 62.0,
+      "type": [
+        "number"
+      ]
+    },
+    "substation_longitude": {
+      "minimum": -10,
+      "maximum": 3,
+      "type": [
+        "number"
+      ]
+    }
+  },
+  "required": [
+    "dno_alias",
+    "secondary_substation_id",
+    "lv_feeder_id",
+    "aggregated_device_count_active",
+    "primary_consumption_active_import",
+    "total_consumption_active_import",
+    "data_collection_log_timestamp",
+    "insert_time",
+    "last_modified_time",
+    "substation_latitude",
+    "substation_longitude"
+  ]
+}

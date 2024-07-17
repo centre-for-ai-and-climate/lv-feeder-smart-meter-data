@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "lv-feeder-smart-meter-data"
+version = "0.1.0"
+description = "Combined LV Feeder level smart meter data from UK DNOs"
+authors = ["Centre for AI & Climate"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+python-dotenv = "^1.0.1"
+plotly = "^5.22.0"
+pandas = "^2.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
