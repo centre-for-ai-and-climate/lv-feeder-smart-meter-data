@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Combined LV Feeder level smart meter data from UK DNOs"
 authors = ["Centre for AI & Climate"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -11,6 +12,9 @@ requests = "^2.32.3"
 python-dotenv = "^1.0.1"
 plotly = "^5.22.0"
 pandas = "^2.2.2"
+geopandas = "^1.0.1"
+contextily = "^1.6.2"
+pyarrow = "^17.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
